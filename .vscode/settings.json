@@ -1,0 +1,8 @@
+{
+  "doxdocgen.file.copyrightTag": [],
+  "emmet.preferences": {},
+  "reactSnippets.settings.prettierEnabled": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
+}
