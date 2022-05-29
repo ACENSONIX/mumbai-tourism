@@ -1,13 +1,13 @@
 import React from "react";
-// import ".././App.css";
+import "../../App.css";
 import { Button } from "../Button/Button";
 import "./HeroSection.css";
 
 function HeroSection() {
   return (
     <div className="hero-container">
-      {/* <img src="Assets/Slider/1.jpg" alt="image" /> */}
-      <h1>ADVENTURE AWAITS</h1>
+      <img src="Assets/Images/2.jpg" alt="image" />
+      <h1>EXPLORE MUMBAI</h1>
       <p>What are you waiting for?</p>
       <div className="hero-btns">
         <Button
@@ -15,7 +15,7 @@ function HeroSection() {
           buttonStyle="btn--outline"
           buttonSize="btn--large"
         >
-          GET STARTED
+          SIGN UP
         </Button>
         <Button
           className="btns"
@@ -23,7 +23,7 @@ function HeroSection() {
           buttonSize="btn--large"
           onClick={console.log("hey")}
         >
-          WATCH TRAILER <i className="far fa-play-circle" />
+          LOG IN <i className="far fa-play-circle" />
         </Button>
       </div>
     </div>

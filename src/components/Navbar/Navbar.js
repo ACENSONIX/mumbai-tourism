@@ -97,7 +97,7 @@ function Navbar() {
             </li>{" "}
           </ul>
 
-          {button && <button buttonStyle="btn--outline">SIGN UP</button>}
+          {/* {button && <button buttonStyle="btn--outline">SIGN UP</button>} */}
         </div>
       </nav>
     </>
