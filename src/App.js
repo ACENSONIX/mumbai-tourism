@@ -1,17 +1,28 @@
 import React from "react";
-<<<<<<< HEAD
-import Cards from "./components/Cards/Cards";
-import Carousel from "./components/Carousel/Carousel"
-=======
->>>>>>> 477a8d75a121422b893d83027e794c7345575abb
+
+// import Cards from "./components/Cards/Cards";
+// import Carousel from "./components/Carousel/Carousel";
+
 import Navbar from "./components/Navbar/Navbar";
-import Cards from "./components/Cards/Cards";
-import Footer from "./components/Footer/Footer";
+// import Footer from "./components/Footer/Footer";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Contact from "./components/Pages/Contact";
+import Signup from "./components/Pages/Signup";
+import Home from "./components/Pages/Home";
+
 function App() {
   return (
     <>
-      <Navbar />
-      <Footer />
+      <Router>
+        <Navbar />
+        <Home />
+        <Routes>
+          <Route path="/" exact element={Home}></Route>
+          <Route path="/contact" exact element={Contact}></Route>
+          <Route path="/sign-up" exact element={Signup}></Route>
+        </Routes>
+        {/* <Footer /> */}
+      </Router>
     </>
   );
 }
