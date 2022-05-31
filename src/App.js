@@ -16,6 +16,10 @@ import Home from "./components/Pages/Home";
 import Mustsee from "./components/Must See/Mustsee";
 import Historical from "./components/Historical/Historical";
 import Activities from "./components/Activities/Activities";
+import Mumbaizoo from "./components/Activities/Mumbaizoo";
+import Sanjaygandhinationalpark from "./components/Activities/Sanjaygandhinationalpark";
+import Esselworld from "./components/Activities/Esselworld";
+import Fashionstreet from "./components/Activities/Fashionstreet";
 function App() {
   return (
     <>
@@ -29,10 +33,13 @@ function App() {
         <Route path="/must-see" element={<Mustsee />}></Route>
         <Route path="/historical" element={<Historical />}></Route>
         <Route path="/activities" element={<Activities />}></Route>
+        <Route path="/activities-mumbai-zoo" element={<Mumbaizoo />}></Route>
+        <Route path="/activities-sanjay-gandhi-national-park" element={<Sanjaygandhinationalpark />}></Route>
+        <Route path="/activities-fashion-street'" element={<Fashionstreet />}></Route>
+        <Route path="/activities-essel-world" element={<Esselworld />}></Route>
         {/* <Footer /> */}
       </Routes>
     </>
   );
 }
-
 export default App;
