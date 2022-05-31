@@ -83,25 +83,7 @@ main {
 .bar {
   width: 100%;
   height: 200px;
-  background: -moz-linear-gradient(
-    289deg,
-    #c60a09 0%,
-    #f23332 36%,
-    #c60a09 100%
-  );
-  background: -webkit-linear-gradient(
-    289deg,
-    #c60a09 0%,
-    #f23332 36%,
-    #c60a09 100%
-  );
-  background: -ms-linear-gradient(
-    289deg,
-    #c60a09 0%,
-    #f23332 36%,
-    #c60a09 100%
-  );
-  background: linear-gradient(161deg, #c60a09 0%, #f23332 36%, #c60a09 100%);
+
   opacity: 0.3;
   position: absolute;
   z-index: 0;
