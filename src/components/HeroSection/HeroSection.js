@@ -23,7 +23,7 @@ function HeroSection() {
   }, []);
   return (
     <div className="hero-container">
-      <img src="Assets/Images/2.jpg" alt="" />
+      <img className="images" src="Assets/Images/2.jpg" alt="" />
       <h1>EXPLORE MUMBAI</h1>
       <p>What are you waiting for?</p>
       <div className="hero-btns">

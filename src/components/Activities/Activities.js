@@ -1,9 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import CardItem from "../Cards/CardItem";
+import Info from "../Info/Info";
 const Activities = () => {
   return (
     <>
+      <Info
+        heading="FUN ACTIVITIES IN MUMBAI"
+        info="Lorem ipsum dolor sit amet consectetur adipisicing elit. Non enim blanditiis debitis accusantium vitae totam recusandae, delectus a quo, labore fuga, earum laborum maxime fugiat! Delectus unde iste minus aperiam!"
+        img="https://picsum.photos/200/200"
+      />
       <div className="cards">
         <h1>Check out these EPIC Destinations!</h1>
         <div className="cards__container">
