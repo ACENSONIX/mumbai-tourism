@@ -1,12 +1,34 @@
 import React, { useState, useEffect } from "react";
+// The below line is added by VIKRAM SINGH
+import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { collection, getDocs } from 'firebase/firestore'
+import { auth , db } from '../../firebase-config';
 import { Link } from "react-router-dom";
 // import { Button } from "./Button";
 import "./Navbar.css";
-
 function Navbar() {
   const [click, setClick] = useState(false);
   const [button, setButton] = useState(true);
+  const [user, setUser] = useState({});
+  const [display, setDisplay] = useState("");
+  const userCollectionRef = collection(db, "User");
+  const [name,setName] = useState([]);
+  useEffect(() => {
+    onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+      if (currentUser != null) {
+        const data = getDocs(userCollectionRef).then(()=>{setName(data.docs.map((doc)=>({ ...doc.data(), id: doc.id })))}).catch((error)=>{console.log(error)});
+        setDisplay(true)
+      }
+      else {
+        setDisplay(false)
+      }
+    })
+  }, []);
+  const logout = async () => {
+    await signOut(auth)
 
+  }
   const handleClick = () => setClick(!click);
   const closeMobileMenu = () => setClick(false);
 
@@ -23,7 +45,7 @@ function Navbar() {
   }, []);
 
   window.addEventListener("resize", showButton);
-
+  let email = user?.email;
   return (
     <>
       <nav className="navbar">
@@ -99,6 +121,8 @@ function Navbar() {
 
           {/* {button && <button buttonStyle="btn--outline">SIGN UP</button>} */}
         </div>
+        {display ?<span style={{ color: "white" }}>{email.substr(0,email.lastIndexOf('@'))}</span>:""}
+        {display ? <button onClick={logout} style={{ color: "white" }}>Signout</button> : ""}
       </nav>
     </>
   );
