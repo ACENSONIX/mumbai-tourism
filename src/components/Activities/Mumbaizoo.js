@@ -5,7 +5,7 @@ import { db } from '../../firebase-config';
 const Mumbaizoo = () => {
     const [usersComment, setUsersComment] = useState([]);
     const [comments, setComments] = useState("");
-    const userCollectionRef = collection(db, "Imagica");
+    const userCollectionRef = collection(db, "Mumbaizoo");
     useEffect(() => {
         const getUsersComments = async () => {
             try {
@@ -17,7 +17,7 @@ const Mumbaizoo = () => {
             }
         };
         getUsersComments();
-    }, []);
+    });
     const Post = async () => {
         await addDoc(userCollectionRef, { Name: "Sahil", Comment: comments });
     };

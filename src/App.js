@@ -20,6 +20,12 @@ import Mumbaizoo from "./components/Activities/Mumbaizoo";
 import Sanjaygandhinationalpark from "./components/Activities/Sanjaygandhinationalpark";
 import Esselworld from "./components/Activities/Esselworld";
 import Fashionstreet from "./components/Activities/Fashionstreet";
+import Gatewayofindia from "./components/Historical/Gatewayofindia";
+import Chhatrapatishivajiterminus from "./components/Historical/Chhatrapatishivajiterminus";
+import Elephantacaves from "./components/Historical/Elephantacaves";
+import Worlisealink from "./components/Must See/Worlisealink";
+import Marinedrive from "./components/Must See/Marinedrive";
+import Filmcity from "./components/Must See/Filmcity";
 function App() {
   return (
     <>
@@ -35,8 +41,14 @@ function App() {
         <Route path="/activities" element={<Activities />}></Route>
         <Route path="/activities-mumbai-zoo" element={<Mumbaizoo />}></Route>
         <Route path="/activities-sanjay-gandhi-national-park" element={<Sanjaygandhinationalpark />}></Route>
-        <Route path="/activities-fashion-street'" element={<Fashionstreet />}></Route>
+        <Route path="/activities-fashion-street" element={<Fashionstreet />}></Route>
         <Route path="/activities-essel-world" element={<Esselworld />}></Route>
+        <Route path="/historical-gate-way-of-india" element={<Gatewayofindia />}></Route>
+        <Route path="/historical-chhatrapati-shivaji-terminus" element={<Chhatrapatishivajiterminus />}></Route>
+        <Route path="/historical-elephanta-caves" element={<Elephantacaves />}></Route>
+        <Route path="/mustsee-worli-sea-link" element={<Worlisealink />}></Route>
+        <Route path="/mustsee-marine-drive" element={<Marinedrive />}></Route>
+        <Route path="/mustsee-film-city" element={<Filmcity />}></Route>
         {/* <Footer /> */}
       </Routes>
     </>

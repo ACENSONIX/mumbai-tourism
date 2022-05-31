@@ -2,10 +2,10 @@ import React from "react";
 import { useState, useEffect } from "react";
 import { collection, getDocs, addDoc } from 'firebase/firestore'
 import { db } from '../../firebase-config';
-const Esselworld = () => {
+const Elephantacaves = () => {
     const [usersComment, setUsersComment] = useState([]);
     const [comments, setComments] = useState("");
-    const userCollectionRef = collection(db, "Esselworld");
+    const userCollectionRef = collection(db, "Elephantacaves");
     useEffect(() => {
         const getUsersComments = async () => {
             try {
@@ -71,6 +71,7 @@ const Esselworld = () => {
                     return (
                         <div key={index}>
                             <h1>{usersComment.Name + ' : ' + usersComment.Comment}</h1>
+                            <h1>{ }</h1>
                         </div>
                     );
                 })
@@ -78,4 +79,4 @@ const Esselworld = () => {
         </>
     );
 };
-export default Esselworld;
+export default Elephantacaves;

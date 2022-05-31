@@ -1,81 +1,20 @@
 import React from "react";
-import { useState, useEffect } from "react";
-import { collection, getDocs , addDoc } from 'firebase/firestore'
-import { db } from '../../firebase-config';
+import { Link } from "react-router-dom";
 const Mustsee = () => {
-    const [usersComment, setUsersComment] = useState([]);
-    const [comments,setComments] = useState("");
-    const userCollectionRef = collection(db, "Mustsee-Comments");
-    useEffect(() => {
-        const getUsersComments = async () => {
-            try {
-                const data = await getDocs(userCollectionRef);
-                setUsersComment(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
-                console.log(usersComment);
-            } catch (error) {
-                console.log(error);
-            }
-        };
-        getUsersComments();
-    }, []);
-    const Post = async() => {
-        await addDoc(userCollectionRef, { Name: "Sahil", Comment: comments });
-    };
     return (
         <>
-            <h1>This is must see</h1>
-            <div className="flex justify-center">
-                <div className="mb-3 xl:w-96">
-                    <label
-                        htmlFor="exampleFormControlTextarea1"
-                        className="form-label inline-block mb-2 text-gray-700"
-                    >
-                        Write your Review Here
-                    </label>
-                    <textarea onChange={(e)=>{
-                        setComments(e.target.value);
-                    }}
-                        className="form-control
-  block
-  w-full
-  px-3
-  py-1.5
-  text-base
-  font-normal
-  text-gray-700
-  bg-white bg-clip-padding
-  border border-solid border-gray-300
-  rounded
-  transition
-  ease-in-out
-  m-0
-  focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-"
-                        id="exampleFormControlTextarea1"
-                        rows={3}
-                        placeholder="Your message"
-                        defaultValue={""}
-                    />
-                </div>
+            <h1>This is Dummy Card In Must see</h1>
+            <div style={{ width: "500px", height: "500px", backgroundColor: "blue" }}>
+                <Link to={'/mustsee-worli-sea-link'}>Read More About Worli Sea Link</Link>
             </div>
-            <div className="flex space-x-2 justify-center">
-                <button onClick={Post}
-                    type="button"
-                    className="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
-                >
-                    Post
-                </button>
+            <br />
+            <div style={{ width: "500px", height: "500px", backgroundColor: "blue" }}>
+                <Link to={'/mustsee-marine-drive'}>Read More about Marine Drive</Link>
             </div>
-            {
-                usersComment.map((usersComment, index) => {
-                    return (
-                        <div key={index}>
-                            <h1>{usersComment.Name + ' : ' + usersComment.Comment}</h1>
-                            <h1>{}</h1>
-                        </div>
-                    );
-                })
-            }
+            <br />
+            <div style={{ width: "500px", height: "500px", backgroundColor: "blue" }}>
+                <Link to={'/mustsee-film-city'}>Read More About Film City</Link>
+            </div>
         </>
     );
 };
