@@ -49,7 +49,6 @@ function App() {
         <Route path="/mustsee-worli-sea-link" element={<Worlisealink />}></Route>
         <Route path="/mustsee-marine-drive" element={<Marinedrive />}></Route>
         <Route path="/mustsee-film-city" element={<Filmcity />}></Route>
-        {/* <Footer /> */}
       </Routes>
     </>
   );
