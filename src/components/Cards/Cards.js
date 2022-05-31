@@ -13,19 +13,19 @@ function Cards() {
               src="Assets/Images/3.jpg"
               text="Historical Landmarks - Visit Mumbai's landmarks of historical significance"
               label="Adventure"
-              path="/services"
+              path="/historical"
             />
             <CardItem
               src="Assets/Images/1.jpg"
               text="Activities to do - Mumbai has many exciting activities in nature"
               label="Luxury"
-              path="/services"
+              path="/activities"
             />
             <CardItem
               src="Assets/Images/7.jpg"
               text="Must-See Places - Check out Mumbai's most iconic sceneries"
               label="Luxury"
-              path="/services"
+              path="/must-see"
             />
           </ul>
         </div>
