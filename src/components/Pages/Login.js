@@ -68,9 +68,6 @@ const Login = () => {
                 type="password"
                 placeholder="******************"
               />
-              <p className="text-red-500 text-xs italic">
-                Please choose a password.
-              </p>
             </div>
             <div className="flex items-center justify-between">
               <button
@@ -85,7 +82,7 @@ const Login = () => {
                   navigate("/sign-up");
                 }}
               >
-                Sign In
+                Sign Up
               </button>
             </div>
           </form>

@@ -5,10 +5,10 @@ import React from "react";
 
 import Navbar from "./components/Navbar/Navbar";
 // import Footer from "./components/Footer/Footer";
-// <----Below Line is Commented by Vikram Singh 
+// <----Below Line is Commented by Vikram Singh
 // import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // <----Below Line is Written by Vikram Singh
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 import Contact from "./components/Pages/Contact";
 import Signup from "./components/Pages/Signup";
 import Login from "./components/Pages/Login";
@@ -26,6 +26,7 @@ import Elephantacaves from "./components/Historical/Elephantacaves";
 import Worlisealink from "./components/Must See/Worlisealink";
 import Marinedrive from "./components/Must See/Marinedrive";
 import Filmcity from "./components/Must See/Filmcity";
+import Footer from "./components/Footer/Footer";
 function App() {
   return (
     <>
@@ -40,16 +41,35 @@ function App() {
         <Route path="/historical" element={<Historical />}></Route>
         <Route path="/activities" element={<Activities />}></Route>
         <Route path="/activities-mumbai-zoo" element={<Mumbaizoo />}></Route>
-        <Route path="/activities-sanjay-gandhi-national-park" element={<Sanjaygandhinationalpark />}></Route>
-        <Route path="/activities-fashion-street" element={<Fashionstreet />}></Route>
+        <Route
+          path="/activities-sanjay-gandhi-national-park"
+          element={<Sanjaygandhinationalpark />}
+        ></Route>
+        <Route
+          path="/activities-fashion-street"
+          element={<Fashionstreet />}
+        ></Route>
         <Route path="/activities-essel-world" element={<Esselworld />}></Route>
-        <Route path="/historical-gate-way-of-india" element={<Gatewayofindia />}></Route>
-        <Route path="/historical-chhatrapati-shivaji-terminus" element={<Chhatrapatishivajiterminus />}></Route>
-        <Route path="/historical-elephanta-caves" element={<Elephantacaves />}></Route>
-        <Route path="/mustsee-worli-sea-link" element={<Worlisealink />}></Route>
+        <Route
+          path="/historical-gate-way-of-india"
+          element={<Gatewayofindia />}
+        ></Route>
+        <Route
+          path="/historical-chhatrapati-shivaji-terminus"
+          element={<Chhatrapatishivajiterminus />}
+        ></Route>
+        <Route
+          path="/historical-elephanta-caves"
+          element={<Elephantacaves />}
+        ></Route>
+        <Route
+          path="/mustsee-worli-sea-link"
+          element={<Worlisealink />}
+        ></Route>
         <Route path="/mustsee-marine-drive" element={<Marinedrive />}></Route>
         <Route path="/mustsee-film-city" element={<Filmcity />}></Route>
       </Routes>
+      <Footer />
     </>
   );
 }

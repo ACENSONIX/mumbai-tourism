@@ -103,9 +103,7 @@ const Signup = () => {
                 type="password"
                 placeholder="******************"
               />
-              <p className="text-red-500 text-xs italic">
-                Please choose a password.
-              </p>
+              
             </div>
             <div className="flex items-center justify-between">
               <button

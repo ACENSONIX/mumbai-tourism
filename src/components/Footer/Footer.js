@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -6,7 +7,7 @@ const Footer = () => {
       <footer class="p-4 bg-white sm:p-6 dark:bg-gray-800">
         <div class="md:flex md:justify-between px-12">
           <div class="mb-6 md:mb-0">
-            <a href="https://flowbite.com" class="flex items-center">
+            <a href="" class="flex items-center">
               <img
                 src="./././Assets/mumbai.png"
                 class="mr-3 h-8"
@@ -24,14 +25,10 @@ const Footer = () => {
               </h2>
               <ul class="text-gray-600 dark:text-gray-400">
                 <li class="mb-4">
-                  <a href="https://flowbite.com" class="hover:underline">
-                    LogIn
-                  </a>
+                  <Link to={"/log-in"}>LogIn</Link>
                 </li>
                 <li class="mb-4">
-                  <a href="https://flowbite.com" class="hover:underline">
-                    Signup
-                  </a>
+                  <Link to={"/sign-up"}>Sign-up</Link>
                 </li>
               </ul>
             </div>
@@ -41,19 +38,13 @@ const Footer = () => {
               </h2>
               <ul class="text-gray-600 dark:text-gray-400">
                 <li class="mb-4">
-                  <a href="https://flowbite.com" class="hover:underline">
-                    Historical
-                  </a>
+                  <Link to={"/historical"}>Historical</Link>
                 </li>
                 <li class="mb-4">
-                  <a href="https://flowbite.com" class="hover:underline">
-                    Activities
-                  </a>
+                  <Link to={"/activities"}>Activities</Link>
                 </li>
                 <li>
-                  <a href="https://tailwindcss.com/" class="hover:underline">
-                    Must-See
-                  </a>
+                  <Link to={"/must-see"}>Must-see</Link>
                 </li>
               </ul>
             </div>
@@ -78,11 +69,7 @@ const Footer = () => {
         <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
         <div class="sm:flex sm:items-center sm:justify-between px-12">
           <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2022{" "}
-            <a href="https://flowbite.com" class="hover:underline">
-              Mumbai Tourism™
-            </a>
-            . All Rights Reserved.
+            © 2022 <Link to={"/"}>Mumbai-tourism</Link>. All Rights Reserved.
           </span>
           <div class="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <a
